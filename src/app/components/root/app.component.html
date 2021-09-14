@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row ">
+        <div class="toolbar">
+            <span id="title">Where in the world?</span>
+            <div class="mode-dark">
+                <fa-icon *ngIf="!changeTheme" [icon]="faMoon"></fa-icon>
+                <input *ngIf="!changeTheme" (click)="onSetTheme('light-theme-l')" placeholder="Light Mode" class="changeTheme label-dark"/>
+                <fa-icon *ngIf="changeTheme" [icon]="faMoon"></fa-icon>
+                <input *ngIf="changeTheme" (click)="onSetTheme('dark-theme-l')" placeholder="Dark Mode" class="changeTheme"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

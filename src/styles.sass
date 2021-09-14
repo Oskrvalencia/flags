@@ -1,0 +1,62 @@
+@import '~@angular/material/theming'
+@include mat-core()
+
+$light-primary: mat-palette($mat-orange, 600)
+$light-accent: mat-palette($mat-blue, 800)
+$light-warn: mat-palette($mat-red, 500)
+
+$dark-primary: mat-palette($mat-green, A200)
+$dark-accent: mat-palette($mat-purple, A700)
+$dark-warn: mat-palette($mat-red, A400)
+
+$light-theme: mat-light-theme($light-primary,$light-accent,$light-warn)
+$dark-theme: mat-dark-theme($dark-primary,$dark-accent,$dark-warn)
+
+@include angular-material-theme($light-theme)
+
+.light-theme-l
+    @include angular-material-theme($light-theme)
+    background: #f1f1f1 !important
+    background-color: #f1f1f1 !important
+    max-width: 100% !important
+    display: block
+    .toolbar
+        box-shadow: 3px 1px 7px 3px #ccc
+    .row>*
+        box-shadow: 1px 1px 9px 1px #ccc
+    .option
+        background-color: #f1f1f1  !important
+        outline: none
+    .search
+        background-color: #f1f1f1  !important
+        outline: none
+    a
+        color: #222 !important
+        background-color: #f1f1f1 !important
+        border: none
+        box-shadow: 1px 1px 9px 1px #9b9b9b
+
+.dark-theme-l
+    @include angular-material-theme($dark-theme)
+    background: #222 !important
+    background-color: #222 !important
+    color: #f1f1f1 !important
+    max-width: 100% !important
+    display: block
+    .toolbar
+        box-shadow: 3px 1px 7px 3px #3e4447 
+    .row>*
+        box-shadow: 1px 1px 9px 1px #3e4447 
+    .option
+        color: #f1f1f1 !important
+        background-color: #222 !important
+        outline: none
+    .search
+        background-color: #222 !important
+        outline: none
+    a
+        color: #f1f1f1 !important
+        background-color: #272727 !important
+        border: none
+        box-shadow: 1px 1px 9px 1px #0e1011
+

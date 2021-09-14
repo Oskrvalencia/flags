@@ -1,0 +1,68 @@
+*
+  background-color: inherit
+  background: inherit
+
+.label-dark
+  color: #f1f1f1
+
+.changeTheme
+  border: none
+  cursor: pointer
+  outline: none !important
+
+.changeTheme :focus
+  outline: none !important
+
+.mode-dark fa-icon
+  padding: 1rem
+
+.mode-dark
+  margin: 1rem
+
+.toolbar
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  height: 60px
+  display: flex
+  align-items: center
+  font-weight: 600
+  display: flex
+  flex-direction: row
+  flex-wrap: nowrap
+  justify-content: space-between
+  align-items: baseline
+  align-content: flex-start
+  width: 100%
+
+#title
+  font-size: 1.2rem
+  padding-left: 8rem
+  font-weight: bold
+  margin-top: 1rem
+
+input :focus
+  outline: none !important
+
+input
+  outline: none !important
+
+.row>*
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  align-items: stretch
+  align-content: stretch
+  padding: 0 !important
+
+@media screen and (max-width: 575px)
+
+  #title
+    padding-left: 1rem
+
+  .changeTheme
+    width: 80px !important
+
+  .toolbar
+    height: 40px !important

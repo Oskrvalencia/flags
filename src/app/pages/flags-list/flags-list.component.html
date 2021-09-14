@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row row-filter">
+        <div class="filter-search">
+            <div class="form-control">
+                <fa-icon class="icon" [icon]="faSearch"></fa-icon>
+                <input type="text" class="form-control search border-0" placeholder="Search for a country..."
+                    name="filterFlags" [(ngModel)]="filterFlags">
+            </div>
+        </div>
+        <div class="filter-select">
+            <div class="form-control">
+                <select class="form-control option" name="selectListFlags" [(ngModel)]="selectListFlags">
+                    <option class="option" value="">Filter by Region</option>
+                    <option class="option" value="Africa">Africa</option>
+                    <option class="option" value="America">America</option>
+                    <option class="option" value="Asia">Asia</option>
+                    <option class="option" value="Europe">Europe</option>
+                    <option class="option" value="Oceania">Oceania</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="card" *ngFor="let flag of flagsList | selectListFlags:selectListFlags | filterFlags:filterFlags ">
+            <div class="box" (click)="show(flag)">
+                <img class="img" src={{flag.flag}} alt="">
+            </div>
+            <div class="info" (click)="show(flag)">
+                <h5 class="title"><strong>{{flag.name}}</strong></h5>
+                <label class="sub-title" for=""><strong>Population: </strong> {{flag.population | number}}</label>
+                <label class="sub-title" for=""><strong>Region: </strong>{{flag.region}}</label>
+                <label class="sub-title" for=""><strong>Capital: </strong>{{flag.capital}}</label>
+            </div>
+        </div>
+    </div>
+</div>

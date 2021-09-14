@@ -1,0 +1,37 @@
+<div class="container header">
+    <div class="">
+        <a class="btn btn-primary" (click)='back()'>
+            <fa-icon class="icon" [icon]="faLongArrowAltLeft"></fa-icon>Back
+        </a>
+    </div>
+    <div class="row2">
+        <div class="box">
+            <img class="img" src='{{detailFlag.flag}}' alt="">
+        </div>
+        <div class="container detail">
+            <h5 class="title"><strong>{{detailFlag.name}}</strong></h5>
+            <div class="detail2">
+                <div class="colum1">
+                    <label class="sub-title" for=""><strong>Native Name: </strong> {{detailFlag.nativeName | titlecase}}</label>
+                    <label class="sub-title" for=""><strong>Population: </strong>{{detailFlag.population |
+                        number}}</label>
+                    <label class="sub-title" for=""><strong>Region: </strong>{{detailFlag.region | titlecase}}</label>
+                    <label class="sub-title" for=""><strong>Sub Region: </strong>{{detailFlag.subregion | titlecase}}</label>
+                    <label class="sub-title" for=""><strong>Capital: </strong>{{detailFlag.capital | titlecase}}</label>
+                </div>
+                <div class="colum2">
+                    <label class="sub-title" for=""><strong>Top Level Domain:
+                        </strong>{{detailFlag.topLevelDomain }}</label>
+                    <label class="sub-title" for=""><strong>currencies:
+                        </strong>{{detailFlag.currencies[0].name | titlecase}}</label>
+                    <label class="sub-title" for=""><strong>Languages: </strong>{{detailFlag.languages[0].name |
+                        titlecase}}</label>
+                </div>
+            </div>
+            <div class="detail2 detail3">
+                <label class="sub-title" for=""><strong>Borders: </strong></label>
+                <a *ngFor="let flag of detailFlag.borders" class="btn btn-primary countries">{{flag}}</a>
+            </div>
+        </div>
+    </div>
+</div>

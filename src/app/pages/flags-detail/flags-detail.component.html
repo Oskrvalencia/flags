@@ -12,11 +12,13 @@
             <h5 class="title"><strong>{{detailFlag.name}}</strong></h5>
             <div class="detail2">
                 <div class="colum1">
-                    <label class="sub-title" for=""><strong>Native Name: </strong> {{detailFlag.nativeName | titlecase}}</label>
+                    <label class="sub-title" for=""><strong>Native Name: </strong> {{detailFlag.nativeName |
+                        titlecase}}</label>
                     <label class="sub-title" for=""><strong>Population: </strong>{{detailFlag.population |
                         number}}</label>
                     <label class="sub-title" for=""><strong>Region: </strong>{{detailFlag.region | titlecase}}</label>
-                    <label class="sub-title" for=""><strong>Sub Region: </strong>{{detailFlag.subregion | titlecase}}</label>
+                    <label class="sub-title" for=""><strong>Sub Region: </strong>{{detailFlag.subregion |
+                        titlecase}}</label>
                     <label class="sub-title" for=""><strong>Capital: </strong>{{detailFlag.capital | titlecase}}</label>
                 </div>
                 <div class="colum2">
@@ -30,7 +32,8 @@
             </div>
             <div class="detail2 detail3">
                 <label class="sub-title" for=""><strong>Borders: </strong></label>
-                <a *ngFor="let flag of detailFlag.borders" class="btn btn-primary countries">{{flag}}</a>
+                <a *ngFor="let flag of detailFlag.borders" class="btn btn-primary countries"><a
+                        (click)=show(flag)>{{flag}}</a></a>
             </div>
         </div>
     </div>
